@@ -1,0 +1,28 @@
+    h2 {
+        margin: 1rem 0;
+    }
+
+    .result {
+        background-color: aqua;
+        width: 300px;
+        border-radius: 5px;
+        margin: 1rem 0;
+        height: 30px;
+    }
+
+    .div-button {
+        background-color: tomato;
+        color: #fff;
+        border: 1px solid tomato;
+        border-radius: 5px;
+    }
+
+    input {
+        background-color: aliceblue;
+        border-radius: 5px;
+    }
+
+    label {
+        padding-left: 8px;
+        margin-top: 2px;
+    }

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container px-lg-5">
+        <div class="row mx-lg-n5">
+            <div class="col py-3 px-lg-5 col-md-12 border bg-light">
+                <div class="div-input">
+                    <h1>BÀI TẬP BUỔI 18</h1>
+                    <input onkeypress='validate(event)' id="txt-input" type="text" placeholder="Nhập vào n">
+                    <button onclick="addArr()" class="div-button" id="btn-lesson">Thêm Số</button>
+                    <div class="result">
+                        <label id="lab-result" for=""></label>
+                    </div>
+                </div>
+            </div>
+            <div class="col py-3 px-lg-5 col-md-12 border bg-light">
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-bai-1" data-toggle="tab" data-target="#lesson-1"
+                            type="button" role="tab" aria-controls="nav-home" aria-selected="true">Bài 1</button>
+                        <button class="nav-link" id="nav-bai-2" data-toggle="tab" data-target="#lesson-2" type="button"
+                            role="tab" aria-controls="nav-profile" aria-selected="false">Bài 2</button>
+                        <button class="nav-link" id="nav-bai-3" data-toggle="tab" data-target="#lesson-3" type="button"
+                            role="tab" aria-controls="nav-contact" aria-selected="false">Bài 3</button>
+
+                        <button class="nav-link" id="nav-bai-4" data-toggle="tab" data-target="#lesson-4" type="button"
+                            role="tab" aria-controls="nav-home" aria-selected="true">Bài 4</button>
+                        <button class="nav-link" id="nav-bai-5" data-toggle="tab" data-target="#lesson-5" type="button"
+                            role="tab" aria-controls="nav-profile" aria-selected="false">Bài 5</button>
+                        <button class="nav-link" id="nav-bai-6" data-toggle="tab" data-target="#lesson-6" type="button"
+                            role="tab" aria-controls="nav-contact" aria-selected="false">Bài 6</button>
+
+                        <button class="nav-link" id="nav-bai-7" data-toggle="tab" data-target="#lesson-7" type="button"
+                            role="tab" aria-controls="nav-home" aria-selected="true">Bài 7</button>
+                        <button class="nav-link" id="nav-bai-8" data-toggle="tab" data-target="#lesson-8" type="button"
+                            role="tab" aria-controls="nav-profile" aria-selected="false">Bài 8</button>
+                        <button class="nav-link" id="nnav-bai-9" data-toggle="tab" data-target="#lesson-9" type="button"
+                            role="tab" aria-controls="nav-contact" aria-selected="false">Bài 9</button>
+                        <button class="nav-link" id="nav-bai-10" data-toggle="tab" data-target="#lesson-10"
+                            type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Bài 10</button>
+
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="lesson-1" role="tabpanel" aria-labelledby="nav-bai-1">
+                        <h2>Tổng Số Dương</h2>
+                        <div class="result">
+                            <label id="lab-result-1" for=""></label>
+                        </div>
+                        <button onclick="ex1()" class="div-button" id="btn-lesson-1">Tính Tổng</button>
+                    </div>
+                    <div class="tab-pane fade" id="lesson-2" role="tabpanel" aria-labelledby="nav-bai-2">
+                        <h2>Đếm Số Dương</h2>
+                        <div class="result">
+                            <label id="lab-result-2" for=""></label>
+                        </div>
+                        <button onclick="ex2()" class="div-button" id="btn-lesson-1">Đếm Số</button>
+                    </div>
+                    <div class="tab-pane fade" id="lesson-3" role="tabpanel" aria-labelledby="nav-bai-3">
+                        <h2>Tìm Số Nhỏ Nhất</h2>
+                        <div class="result">
+                            <label id="lab-result-3" for=""></label>
+                        </div>
+                        <button onclick="ex3()" class="div-button" id="btn-lesson-1">Tìm Số Nhỏ Nhất</button>
+                    </div>
+
+                    <div class="tab-pane fade show" id="lesson-4" role="tabpanel" aria-labelledby="nav-bai-4">
+                        <h2>Tìm Số Dương Nhỏ Nhất</h2>
+                        <div class="result">
+                            <label id="lab-result-4" for=""></label>
+                        </div>
+                        <button onclick="ex4()" class="div-button" id="btn-lesson-1">Tìm Số Dương Nhỏ Nhất</button>
+                    </div>
+                    <div class="tab-pane fade" id="lesson-5" role="tabpanel" aria-labelledby="nav-bai-5">
+                        <h2>Tìm Số Chẵn Cuối Cùng</h2>
+                        <div class="result">
+                            <label id="lab-result-5" for=""></label>
+                        </div>
+                        <button onclick="ex5()" class="div-button" id="btn-lesson-1">Tìm Số Chẵn</button>
+                    </div>
+                    <div class="tab-pane fade" id="lesson-6" role="tabpanel" aria-labelledby="nav-bai-6">
+                        <h2>Đổi Chổ</h2>
+                        <input onkeypress='validate(event)' type="text" id="txt-number-1"
+                            placeholder="Nhập Số Vị Trí 1">
+                        <input onkeypress='validate(event)' type="text" id="txt-number-2"
+                            placeholder="Nhập Số Vị Trí 2">
+                        <div class="result">
+                            <label id="lab-result-6" for=""></label>
+                        </div>
+                        <button class="div-button" onclick="ex6()" id="btn-lesson-1">Đổi Chổ</button>
+                    </div>
+                    <div class="tab-pane fade show" id="lesson-7" role="tabpanel" aria-labelledby="nav-bai-7">
+                        <h2>Xắp Xếp Tăng Dần</h2>
+                        <div class="result">
+                            <label id="lab-result-7" for=""></label>
+                        </div>
+                        <button class="div-button" onclick="ex7()" id="btn-lesson-7">Xắp Xếp</button>
+                    </div>
+                    <div class="tab-pane fade" id="lesson-8" role="tabpanel" aria-labelledby="nav-bai-8">
+                        <h2>Tìm Số Nguyên Tố Đầu Tiên</h2>
+                        <div class="result">
+                            <label id="lab-result-8" for=""></label>
+                        </div>
+                        <button class="div-button" onclick="ex8()" ">Tìm Số Nguyển Tố</button>
+                    </div>
+                    <div class=" tab-pane fade" id="lesson-9" role="tabpanel" aria-labelledby="nav-bai-9">
+                            <h2>Đếm Số Nguyên</h2>
+                            <input onkeypress='validate(event)' type="text" id="txt-lesson-9" placeholder="Nhập Số">
+                            <button class="div-button" onclick="addArr9()" id="btn-lesson-9">Thêm Số</button>
+                            <div class="result">
+                                <label id="lab-result-9" for=""></label>
+                            </div>
+                            <button class="div-button" onclick="ex9()" id="btn-lesson-9-1">Đếm Số Nguyên</button>
+                            <div class="result">
+                                <label id="lab-result-9-1" for=""></label>
+                            </div>
+
+                    </div>
+                    <div class="tab-pane fade" id="lesson-10" role="tabpanel" aria-labelledby="nav-bai-10">
+                        <h2>So Sánh Số Lượng Số Âm Và Số Dương</h2>
+                        <div class="result">
+                            <label id="lab-result-10" for=""></label>
+                        </div>
+                        <button class="div-button" onclick="ex10()" id="btn-lesson-10">So Sánh</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
